@@ -1,9 +1,20 @@
 @import "../../shared/variables";
 
+
 .container {
-  height: 650px;
   display: flex;
+}
+.hero-image, .hero-content {
+  display: flex;
+  align-items: flex-end;
   padding: 0;
+  height: 650px;
+}
+
+.hero-image {
+  margin-left: 50px;
+}
+.hero-content {
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;

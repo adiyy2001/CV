@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
+
 import { HeroPartComponent } from './hero-part.component';
 
 
@@ -7,7 +9,8 @@ import { HeroPartComponent } from './hero-part.component';
 @NgModule({
   declarations: [HeroPartComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    AngularTypewriterEffectModule
   ],
   exports: [ HeroPartComponent ]
 })
