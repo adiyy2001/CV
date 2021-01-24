@@ -8,8 +8,4 @@ export const MODULES = [ MatButtonModule ];
     exports: [ ...MODULES ]
 })
 
-<<<<<<< HEAD
 export class AngularMaterialModule { }
-=======
-export class AngularMaterialModule { }
->>>>>>> refs/remotes/origin/develop

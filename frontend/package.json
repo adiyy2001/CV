@@ -7,10 +7,14 @@
     "build": "ng build",
     "test": "ng test",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "lint": "ng lint --fix",
 =======
     "lint": "ng lint",
 >>>>>>> refs/remotes/origin/develop
+=======
+    "lint": "ng lint --fix",
+>>>>>>> main-menu
     "e2e": "ng e2e",
     "postinstall": "ngcc"
   },
