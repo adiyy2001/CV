@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 
 import { HeaderModule } from './header/headers.module';
+import { HeroPartModule } from './hero-part/hero-part.module';
 
 import { AppComponent } from './app.component';
 
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
     NgbModule,
     AngularMaterialModule,
     BrowserAnimationsModule,
+    HeroPartModule,
     HeaderModule
   ],
   providers: [],
