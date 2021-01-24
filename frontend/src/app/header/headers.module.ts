@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './header.component';
+import { DesktopMenuComponent } from './desktop-menu/desktop-menu.component';
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    DesktopMenuComponent
   ],
   imports: [
     CommonModule,
