@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+    <UserSecretsId>5815a63e-42b6-4130-baa9-f45a007026f2</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Queues" Version="12.6.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.15.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.SendGrid" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.10" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
