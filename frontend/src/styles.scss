@@ -1,3 +1,38 @@
 @import "~bootstrap/scss/bootstrap";
+
+
+*, *::after, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+body {       
+    background: #FFF;
+    font-family: 'HelveticaNeue';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: normal;
+    font-size: 17px;
+    color: #092545;
+    transition: background 0.5s ease; 
+}
+
+// typography
+@font-face {
+    font-family: 'Stolzl';
+    src: url('./shared/typography/Stolzl-Regular.eot'); /* IE9 Compat Modes */
+    src: url('./shared/typography/Stolzl-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./shared/typography/Stolzl-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./shared/typography/Stolzl-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('./shared/typography/Stolzl-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+  
+
+  
