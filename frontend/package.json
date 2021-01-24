@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+<<<<<<< HEAD
     "lint": "ng lint --fix",
+=======
+    "lint": "ng lint",
+>>>>>>> refs/remotes/origin/develop
     "e2e": "ng e2e",
     "postinstall": "ngcc"
   },
