@@ -8,11 +8,13 @@ import { HeaderModule } from './header/headers.module';
 import { HeroPartModule } from './hero-part/hero-part.module';
 
 import { AppComponent } from './app.component';
+import { SkillsSectionComponent } from './skills-section/skills-section.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SkillsSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,7 @@ import { AppComponent } from './app.component';
     AngularMaterialModule,
     BrowserAnimationsModule,
     HeroPartModule,
-    HeaderModule
+    HeaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,17 +9,18 @@
   display: flex;
   align-items: flex-end;
   padding: 0;
-  height: 650px;
+  height: calc(100vh - 100px);
 }
 
 .hero-image {
   margin-left: 50px;
   position: relative;
+  align-items: center;
   top: 30px;
   left: 30px;
 }
 .hero-content {
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   font-family: "Stolzl";
@@ -37,11 +38,11 @@
     font-size: 100px;
     font-family: "Stolzl Bold";
     display: inline-block;
-    background-image: -webkit-linear-gradient(left, #f15b74, #ff6021);
-    background-image: -moz-linear-gradient(left, #f15b74, #ff6021);
-    background-image: -ms-linear-gradient(left, #f15b74, #ff6021);
-    background-image: -o-linear-gradient(left, #f15b74, #ff6021);
-    background-image: linear-gradient(to bottom, #f15b74, #ff6021);
+    background-image: -webkit-linear-gradient(left, $pink-color, $orange-color);
+    background-image: -moz-linear-gradient(left, $pink-color, $orange-color);
+    background-image: -ms-linear-gradient(left, $pink-color, $orange-color);
+    background-image: -o-linear-gradient(left, $pink-color, $orange-color);
+    background-image: linear-gradient(to bottom, $pink-color, $orange-color);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
