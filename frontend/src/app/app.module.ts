@@ -9,12 +9,13 @@ import { HeroPartModule } from './hero-part/hero-part.module';
 
 import { AppComponent } from './app.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
-
+import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkillsSectionComponent
+    SkillsSectionComponent,
+    ProjectsSectionComponent
   ],
   imports: [
     BrowserModule,
