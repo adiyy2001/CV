@@ -10,12 +10,14 @@ import { HeroPartModule } from './hero-part/hero-part.module';
 import { AppComponent } from './app.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
+import { OfferComponent } from './offer/offer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsSectionComponent,
-    ProjectsSectionComponent
+    ProjectsSectionComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule,

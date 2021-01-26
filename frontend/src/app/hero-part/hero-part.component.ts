@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero-part.component.scss']
 })
 export class HeroPartComponent {
-  list = ['Development', 'managment', 'cloud solutions', 'User Interfaces']
+  list = ['Development', 'managment', 'cloud solutions', 'User Interfaces'];
 
 
 }
