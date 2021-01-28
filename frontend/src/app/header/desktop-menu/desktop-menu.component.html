@@ -2,20 +2,23 @@
     <a href="http://localhost:4200" class="logo">DevDuo.</a>
     <ul class="menu">
         <li class="menu__item">
-            <a href="#">We</a>
+            <a href="#">{{ 'we' | translate }}</a>
         </li>
         <li class="menu__item">
-            <a href="#">Skills</a>
+            <a href="#">{{ 'skills' | translate }}</a>
         </li>
         <li class="menu__item">
-            <a href="#">Projects</a>
+            <a href="#">{{'projects' | translate }}</a>
         </li>
         <li class="menu__item">
             <a href="#">Offer</a>
         </li>
         <li class="menu__item">
-            <a href="#">Contact</a>
+            <a href="#">{{ 'contact' | translate }}</a>
         </li>
         
     </ul>
+    <div style="margin-left: auto;">
+        <button (click)="changeLanguage('pl')" class="switch-button">pl</button> | <button (click)="changeLanguage('en')" class="switch-button">en</button>
+    </div>
 </div>

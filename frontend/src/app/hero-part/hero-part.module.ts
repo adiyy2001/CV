@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
 
 import { HeroPartComponent } from './hero-part.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -10,7 +11,8 @@ import { HeroPartComponent } from './hero-part.component';
   declarations: [HeroPartComponent],
   imports: [
     CommonModule,
-    AngularTypewriterEffectModule
+    AngularTypewriterEffectModule,
+    TranslateModule.forChild()
   ],
   exports: [ HeroPartComponent ]
 })

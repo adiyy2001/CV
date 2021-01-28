@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 import { HeaderModule } from './header/headers.module';
 import { HeroPartModule } from './hero-part/hero-part.module';
@@ -13,7 +14,12 @@ import { ProjectsSectionComponent } from './projects-section/projects-section.co
 import { OfferComponent } from './offer/offer.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslationHttpLoader } from './translation-http-loader';
+
+export function HttpLoaderFactory(httpClient: HttpClient): TranslationHttpLoader {
+  return new TranslationHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -21,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     SkillsSectionComponent,
     ProjectsSectionComponent,
     OfferComponent,
-    ContactSectionComponent
+    ContactSectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,8 +39,15 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HeroPartModule,
     HeaderModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

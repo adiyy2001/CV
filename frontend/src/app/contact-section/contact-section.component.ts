@@ -27,12 +27,19 @@ export class ContactSectionComponent {
         return this.contactForm.controls[controlName].hasError(errorName);
       }
 
+      
+
     sendEmail(data: any): void {
-        this.http.post( 'https://flashly.azurewebsites.net/api/SendEmail', {
+        const formData = new FormData();
+        formData.append('body', data.value.message);
+        formData.append('subject', data.value.title);
+        formData.append('from', data.value.email);
+        console.log( {
             from: data.value.email,
             subject: data.value.title,
             body: data.value.message
-        } ).subscribe( _ => {
+        }  )
+        this.http.post( 'https://flashly.azurewebsites.net/api/SendEmail', formData ).subscribe( _ => {
             console.log( _ );
             this.contactForm.reset();
         } );

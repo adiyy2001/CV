@@ -1,8 +1,11 @@
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { TranslateLoader } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
-export const baseUrl = 'https://flashly.azurewebsites.net/api/';
+// APP_INITILAZATION improvment
+@Injectable()
 export class TranslationHttpLoader implements TranslateLoader {
   constructor(private httpClient: HttpClient) {}
 
@@ -12,14 +15,15 @@ export class TranslationHttpLoader implements TranslateLoader {
     }
 
     const urls: any = {
-      pl: `${baseUrl}translation/PL`,
-      en: `${baseUrl}translation/EN`,
+      pl: `${environment.baseURL}translation/PL`,
+      en: `${environment.baseURL}translation/EN`,
     };
 
-    let observer = new Observable((observer) => {
+    const observer = new Observable((observer) => {
       this.httpClient.get(urls[lang]).subscribe(
-        (data) => {
-          observer.next(data);
+        (data: any) => {
+          console.log(data.value);
+          observer.next(data.value[0]);
           observer.complete();
         },
         (error) => {
@@ -28,6 +32,6 @@ export class TranslationHttpLoader implements TranslateLoader {
       );
     });
 
-    return observer
+    return observer;
   }
 }

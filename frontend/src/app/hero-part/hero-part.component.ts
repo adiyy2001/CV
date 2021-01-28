@@ -1,17 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { TranslationsService } from 'src/shared/translations.service';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-hero-part',
   templateUrl: './hero-part.component.html',
   styleUrls: ['./hero-part.component.scss']
 })
-export class HeroPartComponent implements OnInit{
-  list = ['Development', 'managment', 'cloud solutions', 'User Interfaces'];
-
-  constructor( private translationService: TranslationsService ) {}
-
+export class HeroPartComponent implements OnInit, OnChanges{
+  constructor(private translate: TranslateService) {}
+  list = ['development', 'managment', 'cloud_solutions', 'user_interfaces'];
   ngOnInit(): void {
-    this.translationService.getTranslations().subscribe(_ => console.log( _ ));
+    
+  }
+  // translatation() {
+  //   fromEvent(this.translate.currentLang, 'ch')
+  // }
+
+  ngOnChanges( simpleChanges: SimpleChanges ) {
+    
   }
 }
