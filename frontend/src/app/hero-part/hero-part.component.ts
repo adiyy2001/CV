@@ -11,7 +11,7 @@ export class HeroPartComponent implements OnInit{
 
   constructor( private translationService: TranslationsService ) {}
 
-  ngOnInit() {
-    this.translationService.getTranslations().subscribe(_ => console.log( _ ))
+  ngOnInit(): void {
+    this.translationService.getTranslations().subscribe(_ => console.log( _ ));
   }
 }
