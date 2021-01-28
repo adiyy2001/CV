@@ -20,26 +20,31 @@ namespace CV.Functions
             [Queue("emailqueue"), StorageAccount("AzureWebJobsStorage")] ICollector<ContactEmailModel> msg,
             ILogger log)
         {
-            string from = req.Query["from"];
-            string body = req.Query["body"];
-            string subject = req.Query["subject"];
+
+            var formdata = await req.ReadFormAsync();
             
-            if(from == "" ||
-                body == "" ||
-                subject == "" ||
-                from == null ||
-                body == null ||
-                subject == null)
+            if(formdata["from"] == "" ||
+                formdata["body"] == "" ||
+                formdata["subject"] == "")
             {
                 return new ResponseModel
                 {
                     statusCode = 422,
-                    message = "Missing parameter"
+                    message = "Missing parameter",
+                    value = formdata
                 };
             }
 
+            ContactEmailModel contact = new ContactEmailModel()
+            {
+                body = formdata["body"],
+                from = formdata["from"],
+                subject = formdata["subject"]
+            };
+
+
             Regex regex = new Regex(@"^[^@\s]+@[^@\s\.]+\.[^@\.\s]+$");
-            if (!regex.IsMatch(from))
+            if (!regex.IsMatch(contact.from))
             {
                 return new ResponseModel
                 {
@@ -47,12 +52,6 @@ namespace CV.Functions
                     message = "Invalid email address"
                 };
             }
-            ContactEmailModel contact = new ContactEmailModel
-            {
-                body = body,
-                from = from,
-                subject = subject
-            };
             msg.Add(contact);
 
             return new ResponseModel
