@@ -1,0 +1,90 @@
+@import "../../shared//variables";
+
+.container {
+  margin-top: 10%;
+  width: 1200px;
+  height: 500px;
+  .form__wrapper {
+    margin: 0 auto;
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    position: relative;
+    background-clip: padding-box; /* !importanté */
+    border: solid 5px transparent; /* !importanté */
+    border-radius: 1em;
+    .header {
+      width: 100%;
+      margin: 20px 55px;
+      font-family: "Stolzl";
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -5px; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(to bottom, $pink-color, $orange-color);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        margin-right: auto;
+        border: none;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        min-width: 160px;
+        height: 50px;
+        background-image: linear-gradient(to bottom, $pink-color, $orange-color);
+        border-radius: 25px;
+        font-family: 'Stolzl';
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.2;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        box-shadow: 0 10px 30px 0px rgb(255 75 90 / 50%);
+        -moz-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+        -webkit-box-shadow: 0 10px 30px 0px rgb(255 75 90 / 50%);
+        -o-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+        -ms-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+        transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        svg {
+          width: 20px;
+          fill: #fff;
+          margin-left: 10px;
+          transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        &:hover > svg {
+          transform: translateX(10px)
+        }
+        &:hover {
+          transform: translateY(-4px);
+        }
+        &:disabled {
+          pointer-events: none;
+          background-color: gray;
+        }
+      }
+    }
+  }
+}

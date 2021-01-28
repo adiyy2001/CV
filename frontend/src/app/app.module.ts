@@ -11,19 +11,26 @@ import { AppComponent } from './app.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 import { OfferComponent } from './offer/offer.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsSectionComponent,
     ProjectsSectionComponent,
-    OfferComponent
+    OfferComponent,
+    ContactSectionComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AngularMaterialModule,
     BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     HeroPartModule,
     HeaderModule,
   ],
