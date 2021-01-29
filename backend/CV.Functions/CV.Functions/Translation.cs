@@ -48,9 +48,9 @@ namespace CV.Functions
                 email = "email",
                 title = "title",
                 message = "message",
-                why_we = "Te powody „dlaczego my” powinny wystarczyć, aby przekonać kogoś, kto szuka odpowiedniej osoby do stron internetowych.",
+                why_we = "These “why we” reasons should be enough to convince someone who is looking for websites solution.",
                 submit = "submit",
-                developer = "develope<br>rs"
+                developer = "develo-<br>pers"
 
             };
             TranslationModel translationEN = new TranslationModel
