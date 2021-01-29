@@ -26,7 +26,7 @@ namespace CV.Functions
                 we = "We",
                 skills = "skills",
                 projects = "projects",
-                offer = "offer",
+                offer = "Oferta",
                 contact = "contact",
                 development = "development",
                 managment = "managment",
@@ -69,8 +69,8 @@ namespace CV.Functions
                 Hi_we_are_Adrian_and_Jakub = "Cze��, jeste�my Adrian i Kuba",
                 scroll_down = "Przejd� ni�ej",
                 knowledge_Skills = "Wiedza i umiej�tno�ci",
-                cloud_logical = "Clound solutions and <br /> Logical part of website",
-                designer_development = "User interface designer and <br /> front-end developer",
+                cloud_logical = "Rozwiązania chmurowe oraz <br /> logiczna część stron",
+                designer_development = "Projektant interfejsów użytkownika and <br /> programista frontendowy",
                 showcase = "show-<br>case",
                 Top_notch_quality = "Najwy�sza jako��",
                 speed_turn_around = "Szybka realizacja",
@@ -83,7 +83,7 @@ namespace CV.Functions
                 message = "Wiadomo��",
                 why_we = "Te powody �dlaczego my� powinny wystarczy�, aby przekona� kogo�, kto szuka odpowiedniej osoby do stron internetowych.",
                 submit = "Wy�lij",
-                developer = "dewelope<br>rzy"
+                developer = "dewelo-<br>perzy"
             };
 
             List<TranslationModel> translationModels = new List<TranslationModel>()
