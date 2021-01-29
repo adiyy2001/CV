@@ -4,15 +4,13 @@
     <div class="hero-text">
       <ngtypewriter [StringList]="list" [speed]="1000"></ngtypewriter>
     </div>
-    <h1 class="hero-header">
-      Develop-<br />
-      ers
+    <h1 class="hero-header" [innerHtml]=" 'developer' | translate ">
     </h1>
     <p class="hero-description">
-      Nice to meet you!<br />
-      Hi we are Adrian and Jakub
+      {{ 'nice_to_meet_you' | translate }}<br />
+      {{ 'hi_we_are_Adrian_and_Jakub' | translate }}
     </p>
-    <button class="hero-button">scroll down</button>
+    <button class="hero-button">{{ 'scroll_down' | translate }}</button>
   </div>
 
   <div class="hero-image" col-lg-4 col-md-6>
