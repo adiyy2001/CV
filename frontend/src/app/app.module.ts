@@ -30,7 +30,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslationHttpLoader
     ContactSectionComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgbModule,
     AngularMaterialModule,
     BrowserAnimationsModule,
