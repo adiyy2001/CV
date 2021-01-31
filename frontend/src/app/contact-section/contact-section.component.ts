@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { scrollElements } from 'src/shared/srcollElements.service';
+import { scrollElements } from '../../shared/srcollElements.service';
 
 @Component({
   selector: 'app-contact-section',
@@ -35,7 +35,7 @@ export class ContactSectionComponent {
     formData.append('from', email);
 
     this.http
-      .post('https://flashly.azurewebsites.net/api/SendEmail', formData)
+      .post('https://api.devduo.pro/portfolio/v1/sendemail', formData)
       .subscribe((_) => {
         console.log(_);
         this.contactForm.reset();
