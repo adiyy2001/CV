@@ -1,20 +1,20 @@
 <div class="container">
     <a href="http://localhost:4200" class="logo">DevDuo.</a>
     <ul class="menu">
-        <li class="menu__item">
-            <a href="#">{{ 'we' | translate }}</a>
+        <li class="menu__item" (click)="moveToSection('#hero')">
+            <a>{{ 'we' | translate }}</a>
         </li>
-        <li class="menu__item">
-            <a href="#">{{ 'skills' | translate }}</a>
+        <li class="menu__item" (click)="moveToSection('#skills')">
+            <a>{{ 'skills' | translate }}</a>
         </li>
-        <li class="menu__item">
-            <a href="#">{{'projects' | translate }}</a>
+        <li class="menu__item" (click)="moveToSection('#projects')">
+            <a>{{'projects' | translate }}</a>
         </li>
-        <li class="menu__item">
-            <a href="#">{{ 'offer' | translate }}</a>
+        <li class="menu__item" (click)="moveToSection('#offer')">
+            <a>{{ 'offer' | translate }}</a>
         </li>
-        <li class="menu__item">
-            <a href="#">{{ 'contact' | translate }}</a>
+        <li class="menu__item" (click)="moveToSection('#contact')">
+            <a>{{ 'contact' | translate }}</a>
         </li>
         
     </ul>
