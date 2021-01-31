@@ -27,7 +27,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SkillsSectionComponent,
     ProjectsSectionComponent,
     OfferComponent,
-    ContactSectionComponent,
+    ContactSectionComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

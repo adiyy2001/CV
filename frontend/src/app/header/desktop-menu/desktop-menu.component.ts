@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-desktop-menu',
   templateUrl: './desktop-menu.component.html',
-  styleUrls: ['./desktop-menu.component.scss']
+  styleUrls: ['./desktop-menu.component.scss'],
 })
-export class DesktopMenuComponent implements OnInit {
+export class DesktopMenuComponent {
+  constructor(private translateService: TranslateService) {}
 
-  constructor( private translateService: TranslateService ) { }
-
-  ngOnInit(): void {
+  changeLanguage(lang: string) {
+    this.translateService.use(lang);
   }
-    changeLanguage(lang: string) {
-      this.translateService.use(lang);
-    }
 
+  moveToSection(section: string) {
+
+    const yOffset = -100; 
+    const element = document.querySelector(section);
+    const y = element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({top: y, behavior: 'smooth'});
+  }
 }

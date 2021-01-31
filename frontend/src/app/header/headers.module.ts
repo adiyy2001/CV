@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './header.component';
-import { DesktopMenuComponent } from './desktop-menu/desktop-menu.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { DesktopMenuComponent } from './desktop-menu/desktop-menu.component';
 
 
 @NgModule({
@@ -13,7 +13,9 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   imports: [
     CommonModule,
-    TranslateModule.forChild()
+    TranslateModule.forChild({
+      extend: true
+    })
   ],
   exports: [
     HeaderComponent
