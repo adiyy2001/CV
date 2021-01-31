@@ -42,6 +42,11 @@
       transition: 2s ease;
         &:hover > .project__card {
             transform: scale(.85);
+            overflow: visible;
+        }
+        &:hover > .project__card > .project__card__preview > img {
+          transform: scale(1.25) translateX(50px);
+          z-index: 999;
         }
         .project__card {
             width: 100%;
@@ -50,12 +55,23 @@
             padding: 40px 30px;
             transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
             &__title {
               font-family: "Stolzl Bold";
             }
             &__sub-title {
               font-family: "Stolzl";
               width: 80%;
+            }
+            &__preview {
+              width: 250px;
+              img {
+                width: 100%;
+                position: absolute;
+                bottom: 40px;
+                transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+              }
             }
             &--blue {
               background-color: $blue-color;
