@@ -15,10 +15,10 @@ import { OfferComponent } from './offer/offer.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslationHttpLoader } from './translation-http-loader';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
-export function HttpLoaderFactory(httpClient: HttpClient): TranslationHttpLoader {
-  return new TranslationHttpLoader(httpClient);
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, "/assets/i18n/", ".json");
 }
 
 @NgModule({
@@ -42,8 +42,8 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslationHttpLoader
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
+          useFactory: HttpLoaderFactory, // exported factory function needed for AoT compilation
+          deps: [HttpClient]
       },
     }),
   ],

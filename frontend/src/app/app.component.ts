@@ -9,9 +9,13 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent  implements OnInit {
   title = 'frontend';
   
-  constructor( private translateService: TranslateService ) {}
+  constructor( private translateService: TranslateService, translate: TranslateService ) {
+    translate.addLangs(['en', 'klingon'])
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 
   ngOnInit() {
-    this.translateService.use('en');
+    this.translateService.setDefaultLang('en');
   }
 }
