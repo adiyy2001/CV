@@ -1,7 +1,23 @@
 <div class="container" id="skills">
-  <h1 class="skills-header col-lg-12">{{ "knowledge_Skills" | translate }}</h1>
+  <h1
+    class="skills-header col-lg-12"
+    animateOnScroll
+    startAnimation="faded-out"
+    endAnimation="released"
+    [scrollOffset]="600"
+    [timeOffset]="1000"
+  >
+    {{ "knowledge_Skills" | translate }}
+  </h1>
   <div class="skills-skills row">
-    <div class="card-container">
+    <div
+      class="card-container"
+      animateOnScroll
+      startAnimation="faded-out-right"
+      endAnimation="released-to-position"
+      [scrollOffset]="650"
+      [timeOffset]="1000"
+    >
       <span class="card-container__pro">BE</span>
       <img
         src="../../assets/icons/be_avatar.svg"
@@ -31,7 +47,14 @@
       </div>
     </div>
     <div class="divider" class="col-lg-2"></div>
-    <div class="card-container">
+    <div
+      class="card-container"
+      animateOnScroll
+      startAnimation="faded-out-right"
+      endAnimation="released-to-position"
+      [scrollOffset]="650"
+      [timeOffset]="1000"
+    >
       <span class="card-container__pro">FE</span>
       <img
         src="../../assets/icons/fe_avatar.svg"
@@ -39,7 +62,10 @@
         class="card-container__image"
       />
       <h3 class="card-container__header">Adrian Turbiński</h3>
-      <p class="card-container__description" [innerHtml]=" 'designer_development' | translate "></p>
+      <p
+        class="card-container__description"
+        [innerHtml]="'designer_development' | translate"
+      ></p>
       <div class="card-container__buttons-group">
         <button class="primary-button">Message</button>
         <button class="primary-button primary-button--ghost">Following</button>

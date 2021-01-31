@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./shared/variables";
 
 *, *::after, *::after {
     margin: 0;
@@ -12,8 +13,8 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
-body {       
-    background: #FFF;
+body {
+    background-color: #fff;
     font-family: 'HelveticaNeue';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -60,3 +61,8 @@ body {
          url('./shared/typography/Stolzl-bold.woff') format('woff'), /* Pretty Modern Browsers */
          url('./shared/typography/Stolzl-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
   }
+
+
+.bodybg-color {
+  background-color: $dark-blue-color;
+}
