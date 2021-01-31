@@ -1,9 +1,10 @@
-@import "../../shared//variables";
+@import "../../shared/variables";
 
 .container {
   margin-top: 10%;
   width: 1200px;
   height: 500px;
+  position: relative;
   .form__wrapper {
     margin: 0 auto;
     width: 600px;
@@ -87,4 +88,25 @@
       }
     }
   }
+
+  .chevron {
+    width: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 22%;
+    fill: $gray-color;
+    transition: fill .3s cubic-bezier(0.47, 0, 0.745, 0.715), opacity .8s cubic-bezier(0.47, 0, 0.745, 0.715);
+    cursor: pointer;
+    &:hover {
+      fill: $blue-color 
+    }
+  }
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
 }
