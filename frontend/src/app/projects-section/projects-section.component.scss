@@ -130,3 +130,16 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+
+// animations
+.faded-out-bottom {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+
+.released-to-position {
+  transform: translateY(0);
+  opacity: 1;
+}
