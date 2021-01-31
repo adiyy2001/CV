@@ -4,6 +4,7 @@ import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
 
 import { HeroPartComponent } from './hero-part.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { AngularScrollAnimationsModule } from 'angular-scroll-animations';
 
 
 
@@ -12,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [
     CommonModule,
     AngularTypewriterEffectModule,
+    AngularScrollAnimationsModule,
     TranslateModule.forChild()
   ],
   exports: [ HeroPartComponent ]

@@ -14,7 +14,6 @@ export class ContactSectionComponent {
   constructor(private http: HttpClient, private scrollElementsService: scrollElements) {
     this.scrollElementsService.getValueForEnd().subscribe(val => {
       this.reachedTheEnd = val.text
-      console.log(val)
     })
 
     this.contactForm = new FormGroup({

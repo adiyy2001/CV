@@ -10,6 +10,7 @@
     font-family: "Stolzl";
     margin-bottom: 40px;
     padding: 0;
+    transition: 2s ease;
   }
 
   .skills-skills {
@@ -34,6 +35,7 @@
   text-align: center;
   margin: 20px 0;
   overflow: hidden;
+  transition: .7s ease;
   &__pro {
     color: #231e39;
     background-image: linear-gradient(to bottom, $pink-color, $orange-color);
@@ -102,4 +104,30 @@
 h6 {
   margin: 5px 0 10px 0;
   text-transform: uppercase;
+}
+
+.faded-out {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.released {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faded-out-right {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.faded-out-left {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+
+.released-to-position {
+  transform: translateX(0);
+  opacity: 1;
 }

@@ -16,6 +16,9 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { AngularScrollAnimationsModule } from 'angular-scroll-animations';
+import { InView } from 'src/shared/appear.directive';
+import { InViewportModule } from 'ng-in-viewport';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "/assets/i18n/", ".json");
@@ -39,6 +42,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     HeroPartModule,
     HeaderModule,
+    AngularScrollAnimationsModule,
+    InViewportModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -47,7 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  providers: [],
+  providers: [InView],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

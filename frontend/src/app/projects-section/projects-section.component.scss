@@ -39,6 +39,7 @@
     }
 
     .wrapper {
+      transition: 2s ease;
         &:hover > .project__card {
             transform: scale(.85);
         }
@@ -76,4 +77,17 @@
 
 .black-color {
     color: $dark-blue-color;
+}
+
+
+// animations
+.faded-out-bottom {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+
+.released-to-position {
+  transform: translateY(0);
+  opacity: 1;
 }

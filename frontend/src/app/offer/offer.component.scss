@@ -1,6 +1,6 @@
 @import "../../shared/variables";
 
-.container {
+.container {       
   width: 1200px;
   height: auto;
   .container__header {
@@ -36,6 +36,7 @@
     min-height: 900px;
     .row {
       .wrapper {
+        transition: .7s linear;
         .tile {
           width: 500px;
           background-color: #0d2d52;
@@ -82,4 +83,26 @@
     color: $smooth-blue-color;
     font-family: 'Stolzl';
   }
+}
+
+
+
+.faded-out-right {
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.released-to-left {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.faded-out-left {
+  transform: translateX(-300px);
+  opacity: 0;
+}
+
+.released-to-right {
+  transform: translateX(0px);
+  opacity: 1;
 }

@@ -1,11 +1,20 @@
 <div class="container">
-  <div class="container__header" [innerHTML]=" 'showcase' | translate " id="projects">
-  </div>
+  <div
+    class="container__header"
+    [innerHTML]="'showcase' | translate"
+    id="projects"
+  ></div>
 
   <div class="container__projects">
     <div class="col-lg-6 container__projects__left">
-
-      <div class="wrapper">
+      <div
+        class="wrapper"
+        animateOnScroll
+        startAnimation="faded-out-bottom"
+        endAnimation="released-to-position"
+        [scrollOffset]="1200"
+        [timeOffset]="1000"
+      >
         <div class="project__card project__card--blue">
           <h4 class="project__card__title white-color">Lorem</h4>
           <h2 class="project__card__sub-title white-color">
@@ -14,11 +23,16 @@
           <div class="project__card__preview"></div>
         </div>
       </div>
-
     </div>
     <div class="col-lg-6 container__projects__right">
-
-      <div class="wrapper">
+      <div
+        class="wrapper"
+        animateOnScroll
+        startAnimation="faded-out-bottom"
+        endAnimation="released-to-position"
+        [scrollOffset]="600"
+        [timeOffset]="1000"
+      >
         <div class="project__card project__card--purple">
           <h4 class="project__card__title white-color">Lorem</h4>
           <h2 class="project__card__sub-title white-color">
@@ -28,14 +42,20 @@
         </div>
       </div>
 
-      <div class="wrapper">
+      <div
+        class="wrapper"
+        animateOnScroll
+        startAnimation="faded-out-bottom"
+        endAnimation="released-to-position"
+        [scrollOffset]="600"
+        [timeOffset]="1000"
+      >
         <div class="project__card project__card--gray">
           <h4 class="project__card__title black-color">Lorem</h4>
           <h2 class="project__card__sub-title black-color">E-commerce</h2>
           <div class="project__card__preview"></div>
         </div>
       </div>
-      
     </div>
   </div>
 </div>
