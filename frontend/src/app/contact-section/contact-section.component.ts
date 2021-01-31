@@ -1,48 +1,49 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { scrollElements } from 'src/shared/srcollElements.service';
 
 @Component({
-    selector: 'app-contact-section',
-    templateUrl: './contact-section.component.html',
-    styleUrls: ['./contact-section.component.scss']
+  selector: 'app-contact-section',
+  templateUrl: './contact-section.component.html',
+  styleUrls: ['./contact-section.component.scss'],
 })
-
 export class ContactSectionComponent {
-   contactForm: FormGroup;
+  contactForm: FormGroup;
+  reachedTheEnd: any;
+  constructor(private http: HttpClient, private scrollElementsService: scrollElements) {
+    this.scrollElementsService.getValueForEnd().subscribe(val => {
+      this.reachedTheEnd = val.text
+      console.log(val)
+    })
 
-    constructor( private http: HttpClient ) {
-        this.contactForm = new FormGroup({
-            email: new FormControl('', [
-                Validators.required,
-                Validators.email,
-              ]),
-            title: new FormControl(''),
-            message: new FormControl('')
-        });
-    }
+    this.contactForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      title: new FormControl(''),
+      message: new FormControl(''),
+    });
+  }
 
-    public hasError(controlName: string, errorName: string): boolean {
-        return this.contactForm.controls[controlName].hasError(errorName);
-      }
+  public hasError(controlName: string, errorName: string): boolean {
+    return this.contactForm.controls[controlName].hasError(errorName);
+  }
 
-      
+  sendEmail(data: any): void {
+    const { message, title, email } = data.value;
+    const formData = new FormData();
+    formData.append('body', message);
+    formData.append('subject', title);
+    formData.append('from', email);
 
-    sendEmail(data: any): void {
-        const formData = new FormData();
-        formData.append('body', data.value.message);
-        formData.append('subject', data.value.title);
-        formData.append('from', data.value.email);
-        console.log( {
-            from: data.value.email,
-            subject: data.value.title,
-            body: data.value.message
-        }  )
-        this.http.post( 'https://flashly.azurewebsites.net/api/SendEmail', formData ).subscribe( _ => {
-            console.log( _ );
-            this.contactForm.reset();
-        } );
-    }
+    this.http
+      .post('https://flashly.azurewebsites.net/api/SendEmail', formData)
+      .subscribe((_) => {
+        console.log(_);
+        this.contactForm.reset();
+      });
+  }
 
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

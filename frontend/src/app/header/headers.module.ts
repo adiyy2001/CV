@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DecimalPipe } from '@angular/common';
 
 import { HeaderComponent } from './header.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -19,6 +19,7 @@ import { DesktopMenuComponent } from './desktop-menu/desktop-menu.component';
   ],
   exports: [
     HeaderComponent
-  ]
+  ],
+  providers: [DecimalPipe]
 })
 export class HeaderModule { }
