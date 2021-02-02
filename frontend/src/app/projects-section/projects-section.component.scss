@@ -1,7 +1,8 @@
 @import "../../shared/variables";
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   .container__header {
     font-size: 150px;
     letter-spacing: -7px;
@@ -25,7 +26,7 @@
     word-wrap: wrap;
   }
 
-  &__projects {
+  .container__projects {
     display: flex;
     justify-content: space-between;
 
@@ -33,9 +34,11 @@
       margin-top: 120px;
       position: relative;
       top: 80px;
+      width: 80%;
     }
     &__right {
       height: 1400px;
+      width: 80%;
     }
 
     .wrapper {
