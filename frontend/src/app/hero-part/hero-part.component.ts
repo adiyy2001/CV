@@ -1,23 +1,22 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-hero-part',
   templateUrl: './hero-part.component.html',
-  styleUrls: ['./hero-part.component.scss']
+  styleUrls: ['./hero-part.component.scss'],
 })
-export class HeroPartComponent implements OnInit, OnChanges{
+export class HeroPartComponent implements OnInit, OnChanges {
   constructor(private translate: TranslateService) {}
-  list = ['development', 'managment', 'cloud_solutions', 'user_interfaces'];
+  translationKeys = ['development', 'managment', 'cloud_solutions', 'user_interfaces'];
+  list: string[]  = [];
   ngOnInit(): void {
-    
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.list = this.translationKeys.map((text) => this.translate.instant(text));
+      console.log(this.list)
+    });
   }
-  // translatation() {
-  //   fromEvent(this.translate.currentLang, 'ch')
-  // }
 
-  ngOnChanges( simpleChanges: SimpleChanges ) {
-    
-  }
+  ngOnChanges(simpleChanges: SimpleChanges) {}
 }
