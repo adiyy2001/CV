@@ -26,12 +26,10 @@
     "affordable_description" : "Our flexible hosting solutions allow for a low cost of website maintenance, while maintaining the appropriate conditions for handling heavy traffic.",
     "agree_or_disagree_to_any_of_the_above" : "Agree or disagree width any of the above?",
     "contact_us" : "Contact us",
-    "email" : "email",
-    "title" : "title",
-    "message" : "message",
-    "why_we" : "These “why we” reasons should be enough to convince someone who is looking for websites solutions.",
-    "submit" : "submit",
-    "developer" : "develo-<br>pers",
-    "MCProject": "online store for Minecraft server",
-    "chimneyProject":"Website for ordering personalized chimneys"
+    "email" : "Email",
+    "title" : "Title",
+    "message" : "Message",
+    "why_we" : "These “why we” reasons should be enough to convince someone who is looking for websites solution.",
+    "submit" : "Submit",
+    "developer" : "Develo-<br>pers"
 }

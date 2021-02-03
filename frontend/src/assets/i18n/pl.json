@@ -31,11 +31,7 @@
     "message" : "Wiadomość",
     "why_we" : "Te powody \"dlaczego my\" powinny wystarczyć, aby przekonać kogoś, kto szuka odpowiedniej osoby do stworzenia strony internetowej.",
     "submit" : "Wyślij",
-<<<<<<< HEAD
-    "developer" : "Dewelo-<br>perzy"
-=======
-    "developer" : "dewelo-<br>perzy",
+    "developer" : "Dewelo-<br>perzy",
     "MCProject": "Sklep internetowy dla serwera minecraft",
-    "chimneyProject":"Strona do zamawiania sperzonalizowanych kominków"
->>>>>>> 5191f4b (fixes visual issues)
+    "chimneyProject":"Strona do zamawiania sperzonalizowanych kominków",
 }
