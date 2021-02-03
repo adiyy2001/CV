@@ -8,7 +8,7 @@
     "development" : "Rozwój",
     "managment" : "Zarządzanie",
     "cloud_solutions" : "Rozwiązania chmurowe",
-    "user_interfaces" : "interfejsy użytkownika",
+    "user_interfaces" : "Interfejsy użytkownika",
     "nice_to_meet_you" : "Miło cię poznać!",
     "hi_we_are_Adrian_and_Jakub" : "Cześć, jesteśmy Adrian i Kuba",
     "scroll_down" : "Przejdź niżej",
@@ -31,5 +31,7 @@
     "message" : "Wiadomość",
     "why_we" : "Te powody \"dlaczego my\" powinny wystarczyć, aby przekonać kogoś, kto szuka odpowiedniej osoby do stworzenia strony internetowej.",
     "submit" : "Wyślij",
-    "developer" : "dewelo-<br>perzy"
+    "developer" : "Dewelo-<br>perzy",
+    "MCProject": "Sklep internetowy dla serwera minecraft",
+    "chimneyProject":"Strona do zamawiania sperzonalizowanych kominków"
 }

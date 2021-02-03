@@ -34,6 +34,7 @@ export class OfferComponent {
     } else {
       bodyClasslist.add('bodybg-color');
       typeWriterClasslist?.add('white-text')
+      this._document.body.style.backgroundColor = "#092545";
     }
   }
 }
