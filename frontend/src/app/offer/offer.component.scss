@@ -29,6 +29,12 @@
     word-wrap: wrap;
   }
 
+  @media (max-width: 900px) {
+    .container-fluid1__header {
+      font-size: 80px;
+    }
+  }
+
   &__description {
     width: 280px;
     font-family: "Stolzl";
