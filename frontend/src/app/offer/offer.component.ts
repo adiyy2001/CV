@@ -24,13 +24,16 @@ export class OfferComponent {
     target: Element;
     visible: boolean;
   }): number | void {
-    const classlist = this._document.body.classList;
+    const bodyClasslist = this._document.body.classList;
+    const typeWriterClasslist = this._document.querySelector('.hero-text')?.classList;
     this.onload++;
     if (this.onload === 1) return 0;
-    if (classlist.contains('bodybg-color')) {
-      classlist.remove('bodybg-color');
+    if (bodyClasslist.contains('bodybg-color')) {
+      bodyClasslist.remove('bodybg-color');
+      typeWriterClasslist?.remove('white-text');
     } else {
-      classlist.add('bodybg-color');
+      bodyClasslist.add('bodybg-color');
+      typeWriterClasslist?.add('white-text')
     }
   }
 }

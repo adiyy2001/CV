@@ -113,6 +113,11 @@
       fill: $blue-color 
     }
   }
+  @media(max-width: 500px) {
+    .chevron {
+      bottom: 10%;
+    }
+  }
 }
 
 .visible {

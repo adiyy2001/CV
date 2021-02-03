@@ -1,4 +1,4 @@
-<!-- <mat-toolbar class="hamburger">
+<mat-toolbar class="hamburger">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
   </mat-toolbar>
 
@@ -10,13 +10,32 @@
         [fixedInViewport]="mobileQuery.matches" 
         >
     <mat-nav-list>
-        <a href="">link 1</a>
-        <a href="">link 1</a>
-        <a href="">link 1</a>
-        <a href="">link 1</a>
-        <a href="">link 1</a>
+        <div class="container wrapper">
+            <a href="https://devduo.pro/" class="logo">DevDuo.</a>
+            <ul class="menu">
+                <li class="menu__item" (click)="moveToSection('#hero')">
+                    <a>{{ 'we' | translate }}</a>
+                </li>
+                <li class="menu__item" (click)="moveToSection('#skills')">
+                    <a>{{ 'skills' | translate }}</a>
+                </li>
+                <li class="menu__item" (click)="moveToSection('#projects')">
+                    <a>{{'projects' | translate }}</a>
+                </li>
+                <li class="menu__item" (click)="moveToSection('#offer')">
+                    <a>{{ 'offer' | translate }}</a>
+                </li>
+                <li class="menu__item" (click)="moveToSection('#contact')">
+                    <a>{{ 'contact' | translate }}</a>
+                </li>
+            </ul>
+            <div style="margin-left: auto;">
+                <button (click)="changeLanguage('pl')" class="switch-button">pl</button> | <button (click)="changeLanguage('en')" class="switch-button">en</button>
+            </div>
+        </div>
+        
     </mat-nav-list>
-</mat-sidenav> -->
+</mat-sidenav>
 
 <app-header></app-header>
 <app-hero-part></app-hero-part>

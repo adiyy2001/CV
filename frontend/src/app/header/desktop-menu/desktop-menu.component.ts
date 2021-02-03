@@ -19,7 +19,6 @@ export class DesktopMenuComponent  implements OnInit{
   constructor(private translateService: TranslateService, private decimalPipe: DecimalPipe, private scrollElementsService: scrollElements) {}
   ngOnInit() {
     gsap.to(".menu",{
-      scrub: 0.3,
       scrollTrigger: {
         onUpdate: (options) => {
           if (options instanceof ScrollTrigger) {
