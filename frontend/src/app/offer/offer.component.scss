@@ -1,9 +1,13 @@
 @import "../../shared/variables";
 
-.container-fluid {       
-  width: 1200px;
+.container-fluid1 {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  // width: 100%;
   height: auto;
-  .container__header {
+  margin-top: 80px;
+  &__header {
     font-size: 150px;
     letter-spacing: -7px;
     margin-bottom: 30px;
@@ -33,59 +37,100 @@
   }
 
   .container {
-    min-height: 900px;
-    .row {
-      .wrapper {
-        transition: .7s linear;
-        .tile {
-          width: 500px;
-          background-color: #0d2d52;
-          font-family: "Stolzl";
-          padding: 20px;
-          display: flex;
-          margin-bottom: 40px;
-          &__info {
-            &__header {
-              color: white;
-              font-family: inherit;
-              display: inline-block;
-              position: relative;
-              margin-bottom: 10px;
-              &::after {
-                content: '';
-                position: absolute;
-                bottom: -4px;
-                left: 0;
-                width: 50%;
-                height: 3px;
-                background-image: -webkit-linear-gradient(left, $pink-color, $orange-color);
-                background-image: -moz-linear-gradient(left, $pink-color, $orange-color);
-                background-image: -ms-linear-gradient(left, $pink-color, $orange-color);
-                background-image: -o-linear-gradient(left, $pink-color, $orange-color);
-                background-image: linear-gradient(to bottom, $pink-color, $orange-color);
-              }
-            }
-            &__description {
-              color: $smooth-blue-color;
-            }
-          }
+    max-width: 1200px;
+    // width: 100%;
+    margin: 0 auto;
+    display: grid;
 
-          svg {
-            fill: $pink-color;
-            width: 180px;
-            margin-right: 15px;
+    @media(min-width: 930px) {
+      & .wrapper:nth-child(1){
+        justify-self: flex-end;
+        margin-right: 5%;
+      }
+  
+      & .wrapper:nth-child(3){
+        justify-self: center;
+        margin-left: 15%;
+      }
+  
+      & .wrapper:nth-child(4){
+        margin-left: 7%;
+      }
+    }
+    .wrapper {
+      transition: 0.7s linear;
+      display: flex;
+      min-width: 300px;
+      max-width: 500px;
+      // width: 100%;
+      .tile {
+        min-width: 300px;
+        max-width: 500px;
+        width: 100%;
+        background-color: #0d2d52;
+        font-family: "Stolzl";
+        padding: 20px;
+        display: flex;
+        margin-bottom: 40px;
+        &__info {
+          &__header {
+            color: white;
+            font-family: inherit;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 10px;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              width: 50%;
+              height: 3px;
+              background-image: -webkit-linear-gradient(
+                left,
+                $pink-color,
+                $orange-color
+              );
+              background-image: -moz-linear-gradient(
+                left,
+                $pink-color,
+                $orange-color
+              );
+              background-image: -ms-linear-gradient(
+                left,
+                $pink-color,
+                $orange-color
+              );
+              background-image: -o-linear-gradient(
+                left,
+                $pink-color,
+                $orange-color
+              );
+              background-image: linear-gradient(
+                to bottom,
+                $pink-color,
+                $orange-color
+              );
+            }
           }
+          &__description {
+            color: $smooth-blue-color;
+          }
+        }
+
+        svg {
+          fill: $pink-color;
+          width: 180px;
+          margin-right: 15px;
         }
       }
     }
   }
   &__question {
     color: $smooth-blue-color;
-    font-family: 'Stolzl';
+    font-family: "Stolzl";
   }
 }
-
-
 
 .faded-out-right {
   transform: translateX(300px);

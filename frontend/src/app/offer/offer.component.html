@@ -1,19 +1,20 @@
-<div class="container-fluid" id="offer"         
-inViewport
-(inViewportAction)="onIntersection($event)">
-  <h1 class="container__header">{{ 'offer' | translate | uppercase}}</h1>
-  <p class="container__description">
+<div class="container-fluid1" 
+     id="offer"         
+     inViewport
+     (inViewportAction)="onIntersection($event)"
+>
+  <h1 class="container-fluid__header">{{ 'offer' | translate | uppercase}}</h1>
+  <p class="container-fluid__description">
     {{ 'why_we' | translate }}
   </p>
 
 <div class="container">
-    <div class="row">
 
-        <div class="wrapper offset-md-5 col-md-5"         
+        <div class="wrapper"         
           animateOnScroll
           startAnimation="faded-out-left"
           endAnimation="released-to-right"
-          [scrollOffset]="600"
+          [scrollOffset]="300"
           [timeOffset]="1000"
         >
           <div class="tile">
@@ -27,11 +28,11 @@ inViewport
           </div>
         </div>
 
-        <div class="wrapper col-md-6"
+        <div class="wrapper"
              animateOnScroll
              startAnimation="faded-out-right"
              endAnimation="released-to-left"
-             [scrollOffset]="600"
+             [scrollOffset]="300"
              [timeOffset]="1000"
         >
           <div class="tile">
@@ -58,11 +59,11 @@ inViewport
             </div>
           </div> -->
 
-        <div class="wrapper offset-md-4 col-md-8"
+        <div class="wrapper"
               animateOnScroll
               startAnimation="faded-out-left"
               endAnimation="released-to-right"
-              [scrollOffset]="600"
+              [scrollOffset]="300"
               [timeOffset]="1000"
         >
             <div class="tile">
@@ -76,11 +77,11 @@ inViewport
               </div>
         </div>
 
-        <div class="wrapper offset-md-1 col-md-6"
+        <div class="wrapper"
         animateOnScroll
         startAnimation="faded-out-right"
         endAnimation="released-to-left"
-        [scrollOffset]="600"
+        [scrollOffset]="300"
         [timeOffset]="1000"
         >
           <div class="tile">
@@ -93,8 +94,7 @@ inViewport
           </div>
         </div>
 
-      </div>
 </div>
 
-<p class="container__question">{{ 'agree_or_disagree_to_any_of_the_above' | translate }}</p>
+<p class="container-fluid__question">{{ 'agree_or_disagree_to_any_of_the_above' | translate }}</p>
 </div>

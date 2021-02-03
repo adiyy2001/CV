@@ -1,18 +1,23 @@
-@import '../shared/variables';
+@import "../shared/variables";
 
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+mat-nav-list {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    font-size: 20px;
+  }
 }
 
-body {
-    background-color: rebeccapurple;
-    font-family: 'HelveticaNeue';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: normal;
-    font-size: 17px;
-    color: #092545;
-    transition: background 0.5s ease;
+@media (min-width: 736px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
 }

@@ -1,29 +1,51 @@
 @import "../../shared/variables";
 
-.container-fluid {
+.container {
   display: flex;
   padding: 0;
-  animation: example .7s;
+  animation: example 0.7s;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-gap: 1rem;
-  padding: 0 80px;
 }
 
 @media (min-width: 900px) {
-  .container-fluid { grid-template-columns: repeat(2, 1fr); }
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+  }
+}
+@media (max-width: 900px) {
+  .hero-content {
+    justify-content: center;
+  }
+
+  .hero-header {
+    font-size: 55px !important;
+    margin-bottom: 7px;
+    line-height: 70px;
+  }
+
+  .hero-text {
+    font-size: 16px !important;
+  }
 }
 
-@media(max-width: 496px) {
+@media (max-width: 496px) {
   .hero-image {
     justify-content: center;
   }
 }
 
-@media(max-width: 600px) {
-  .heor-image {
-  left: 30px;
+@media (max-width: 600px) {
+  .hero-image {
+    left: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .container-fluid {
+    padding: 0 80px;
   }
 }
 
@@ -36,28 +58,28 @@
   min-height: 300px;
   max-height: 500px;
   height: auto;
-  min-width: 300px;
 }
 
 .hero-text {
   font-size: 36px;
-  // color: $blue-color;
-  // font-family: "Stolzl";
 }
 
 .hero-image {
   position: relative;
   align-items: center;
   top: 30px;
+  min-width: 150px;
+  width: 100%;
 }
 .hero-content {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   font-family: "Stolzl";
+  margin-left: 15%;
+  min-width: 300px;
 
   .hero-header {
-    font-size: 150px;
     letter-spacing: -7px;
     line-height: 110px;
     margin-bottom: 30px;
@@ -78,6 +100,12 @@
     -webkit-background-clip: text;
     background-clip: text;
     word-wrap: wrap;
+  }
+
+  @media (max-width: 900px) {
+    .hero-header {
+      font-size: 80px;
+    }
   }
 
   .hero-description {
@@ -140,7 +168,6 @@
     }
   }
 }
-
 
 @keyframes example {
   from {

@@ -5,7 +5,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 export const MODULES = [
   MatButtonModule,
   MatCardModule,
@@ -13,6 +15,9 @@ export const MODULES = [
   MatListModule,
   MatInputModule,
   MatFormFieldModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatIconModule
 ];
 
 @NgModule({

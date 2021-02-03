@@ -1,9 +1,32 @@
 @import '../../../shared/variables';
 
-.container {
-    width: 1200px;
+@media(max-width: 1230px) {
+    .wrapper {
+        padding: 0 80px;
+    }
+}
+@media(max-width: 736px) {
+    .wrapper { 
+        display: none !important;
+    }
+}
+.wrapper {
+    width: 100%;
     display: flex;
     align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    max-height: 100px;
+    z-index: 999;
+    background: none;
+    overflow: hidden;
+    max-height: 100px;
+    height: 100%;
+    background: #FFF;
+    padding: 45px 0px 25px;
+    transition: all ease 0.5s;
+    padding: 0 40px;
     .logo {
         font-size: 22px;
         color: #c8d6df;
@@ -18,6 +41,7 @@
     }
 
     .menu {
+        padding-left: 30px;
         list-style: none;
         margin: 0;
         display: flex;
@@ -34,7 +58,7 @@
                 bottom: 0;
                 left: 0;
                 height: 3px;
-                width: 100%;
+                // width: 100%;
                 background-color: $blue-color;
                 pointer-events: none;
                 transform: scale3d(0,1,1);
