@@ -1,6 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { OfferComponent } from './offer/offer.component';
 
 @Component({
   selector: 'app-root',
