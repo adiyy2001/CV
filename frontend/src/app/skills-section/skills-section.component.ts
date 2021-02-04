@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class SkillsSectionComponent {
-
+    moveToSection(section: string) {
+        const yOffset = -100; 
+        const element = document.querySelector(section);
+        const y = element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    
+        window.scrollTo({top: y, behavior: 'smooth'});
+      }
 }
