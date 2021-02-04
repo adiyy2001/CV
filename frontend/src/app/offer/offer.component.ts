@@ -27,14 +27,20 @@ export class OfferComponent {
     const bodyClasslist = this._document.body.classList;
     const typeWriterClasslist = this._document.querySelector('.hero-text')?.classList;
     this.onload++;
+
     if (this.onload === 1) return 0;
     if (bodyClasslist.contains('bodybg-color')) {
-      bodyClasslist.remove('bodybg-color');
+      this.renderer.removeClass(this._document.body, 'bodybg-color');
+
+      // bodyClasslist.remove('bodybg-color');
       typeWriterClasslist?.remove('white-text');
+
     } else {
-      bodyClasslist.add('bodybg-color');
-      typeWriterClasslist?.add('white-text')
-      this._document.body.style.backgroundColor = "#092545";
+
+      // bodyClasslist.add('bodybg-color');
+      this.renderer.addClass(this._document.body, 'bodybg-color');
+      typeWriterClasslist?.add('white-text');
+
     }
   }
 }
