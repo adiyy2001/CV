@@ -28,8 +28,6 @@ export class AppComponent {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  private _mobileQueryListener: () => void;
-
   moveToSection(section: string) {
     const yOffset = -100; 
     const element = document.querySelector(section);
@@ -41,4 +39,6 @@ export class AppComponent {
   changeLanguage(lang: string) {
     this.translate.use(lang);
   }
+  
+  private _mobileQueryListener: () => void;
 }

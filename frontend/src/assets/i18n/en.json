@@ -7,6 +7,7 @@
     "contact" : "Contact",
     "development" : "Development",
     "managment" : "Managment",
+    "websites": "Websites",
     "cloud_solutions" : "Cloud solutions",
     "user_interfaces" : "User interfaces",
     "nice_to_meet_you" : "Nice to meet you!",
@@ -31,5 +32,7 @@
     "message" : "Message",
     "why_we" : "These “why we” reasons should be enough to convince someone who is looking for websites solution.",
     "submit" : "Submit",
-    "developer" : "Develo-<br>pers"
+    "developer" : "Develo-<br>pers",
+    "MCProject": "Online store for minecraft server ",
+    "chimneyProject":"Website for ordering customized fireplaces"
 }

@@ -9,7 +9,7 @@ import { fromEvent } from 'rxjs';
 })
 export class HeroPartComponent implements OnInit {
   constructor(private translate: TranslateService) {}
-  translationKeys = ['development', 'managment', 'cloud_solutions', 'user_interfaces'];
+  translationKeys = ['websites', 'development', 'managment', 'cloud_solutions', 'user_interfaces'];
   list: string[]  = [];
   ngOnInit(): void {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {

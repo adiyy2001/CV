@@ -4,8 +4,7 @@
      (inViewportAction)="onIntersection($event)"
 >
   <h1 class="container-fluid1__header">{{ 'offer' | translate | uppercase}}</h1>
-  <p class="container-fluid1__description">
-    {{ 'why_we' | translate }}
+  <p class="container-fluid1__description" [innerHtml]=" 'why_we' | translate ">
   </p>
 
 <div class="container">

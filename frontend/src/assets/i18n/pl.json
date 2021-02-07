@@ -7,6 +7,7 @@
     "contact" : "Kontakt",
     "development" : "Rozwój",
     "managment" : "Zarządzanie",
+    "websites": "Strony internetowe",
     "cloud_solutions" : "Rozwiązania chmurowe",
     "user_interfaces" : "Interfejsy użytkownika",
     "nice_to_meet_you" : "Miło cię poznać!",
@@ -14,7 +15,7 @@
     "scroll_down" : "Przejdź niżej",
     "knowledge_Skills" : "Wiedza i umiejętności",
     "cloud_logical" : "Rozwiązania chmurowe oraz <br /> logiczna część stron",
-    "designer_development" : "Projektant interfejsów użytkownika and <br /> programista frontendowy",
+    "designer_development" : "Projektant interfejsów użytkownika i <br /> programista frontendowy",
     "showcase" : "show-<br>case",
     "top_notch_quality" : "Najwyższa jakość",
     "top_notch_description": "Oferujemy najwyższą jakość oferowanych przez nas usług. Nasza realizacja obejmuje projektowanie oraz tworzenie stron internetowych, serwisów internetowych oraz rozwiązań e-commerce",
@@ -29,9 +30,9 @@
     "email" : "e-mail",
     "title" : "Tytuł",
     "message" : "Wiadomość",
-    "why_we" : "Te powody \"dlaczego my\" powinny wystarczyć, aby przekonać kogoś, kto szuka odpowiedniej osoby do stworzenia strony internetowej.",
     "submit" : "Wyślij",
     "developer" : "Dewelo-<br>perzy",
     "MCProject": "Sklep internetowy dla serwera minecraft",
-    "chimneyProject":"Strona do zamawiania sperzonalizowanych kominków"
+    "chimneyProject":"Strona do zamawiania spersonalizowanych kominków",
+    "why_we": "Stworzymy ci wyjątkową stronę internetową, odpowiednią do Twoich potrzeb. <br> A dlaczego my? Bo gwaratujemy..."
 }
