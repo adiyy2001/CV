@@ -9267,31 +9267,6 @@ h3 {
     border-color: #dee2e6;
   }
 }
-*, *::after, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html, body {
-  width: auto;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-}
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  font-family: "HelveticaNeue";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: normal;
-  font-size: 17px;
-  color: #092545;
-  transition: background 0.5s ease;
-}
 @font-face {
   font-family: "Stolzl";
   src: url('Stolzl-Regular.eot');
@@ -9315,6 +9290,28 @@ body {
   src: url('Stolzl-bold.eot');
   /* IE9 Compat Modes */
   src: url('Stolzl-bold.eot') format("embedded-opentype"), url('Stolzl-bold.woff2') format("woff2"), url('Stolzl-bold.woff') format("woff"), url('Stolzl-bold.ttf') format("truetype");
+}
+*, *::after, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: "HelveticaNeue";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: normal;
+  font-size: 17px;
+  color: #092545;
+  transition: background 0.5s ease;
 }
 .bodybg-color {
   background-color: #092545 !important;
