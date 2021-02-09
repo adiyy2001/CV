@@ -9,15 +9,17 @@ import { fromEvent } from 'rxjs';
 })
 export class HeroPartComponent implements OnInit {
   constructor(private translate: TranslateService) {}
-  translationKeys = ['websites', 'development', 'managment', 'cloud_solutions', 'user_interfaces'];
+  
+  private readonly translationKeys = ['websites', 'development', 'managment', 'cloud_solutions', 'user_interfaces'];
   list: string[]  = [];
+
   ngOnInit(): void {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.list = this.translationKeys.map((text) => this.translate.instant(text));
-      console.log(this.list)
     });
   }
-  moveToSection(section: string) {
+
+  moveToSection(section: string): void {
     const yOffset = -100; 
     const element = document.querySelector(section);
     const y = element!.getBoundingClientRect().top + window.pageYOffset + yOffset;

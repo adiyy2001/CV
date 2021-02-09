@@ -13,22 +13,28 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './desktop-menu.component.html',
   styleUrls: ['./desktop-menu.component.scss'],
 })
-export class DesktopMenuComponent  implements OnInit{
-
+export class DesktopMenuComponent implements OnInit {
   reachedTheEnd: boolean = false;
-  constructor(private translateService: TranslateService, private decimalPipe: DecimalPipe, private scrollElementsService: scrollElements) {}
+  constructor(
+    private translateService: TranslateService,
+    private decimalPipe: DecimalPipe,
+    private scrollElementsService: scrollElements
+  ) {}
+
   ngOnInit() {
-    gsap.to(".menu",{
+    gsap.to('.menu', {
       scrollTrigger: {
         onUpdate: (options) => {
           if (options instanceof ScrollTrigger) {
-            const value = Number(this.decimalPipe.transform(options.progress, '1.2-2'));
-            this.reachedTheEnd = value > .99;
-            this.scrollElementsService.setValueForEnd(this.reachedTheEnd)
+            const value = Number(
+              this.decimalPipe.transform(options.progress, '1.2-2')
+            );
+            this.reachedTheEnd = value > 0.99;
+            this.scrollElementsService.setValueForEnd(this.reachedTheEnd);
           }
-        }
-      }
-    })
+        },
+      },
+    });
   }
 
   changeLanguage(lang: string) {
@@ -36,10 +42,11 @@ export class DesktopMenuComponent  implements OnInit{
   }
 
   moveToSection(section: string) {
-    const yOffset = -100; 
+    const yOffset = -100;
     const element = document.querySelector(section);
-    const y = element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const y =
+      element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    window.scrollTo({top: y, behavior: 'smooth'});
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
 }

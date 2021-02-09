@@ -30,7 +30,7 @@
           </mat-form-field>
 
           <mat-form-field class="col-md-10">
-            <textarea matInput placeholder="Message" rows="6" formControlName="message" maxlength="250"></textarea>
+            <textarea matInput [placeholder]="'message' | translate" rows="6" formControlName="message" maxlength="250"></textarea>
             <mat-hint align="end">{{ contactForm.controls.message.value?.length }} / 250</mat-hint>
           </mat-form-field>
           <div class="w-100 d-none d-md-block"></div>

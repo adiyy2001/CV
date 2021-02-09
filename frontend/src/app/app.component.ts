@@ -11,13 +11,14 @@ import { OfferComponent } from './offer/offer.component';
 export class AppComponent {
   
   mobileQuery: MediaQueryList;
+  
   constructor( 
     private translate: TranslateService, 
             changeDetectorRef: ChangeDetectorRef, 
             media: MediaMatcher 
     ) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.setDefaultLang('pl');
+    this.translate.use('pl');
     
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();

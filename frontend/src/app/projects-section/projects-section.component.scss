@@ -1,11 +1,11 @@
-@import "../../shared/variables";
+@import "../../shared/scss/variables";
+@import "../../shared/scss/_mixins";
 
 .container {
   max-width: 1200px;
   width: 100%;
   // overflow: hidden;
   .container__header {
-    font-size: 150px;
     letter-spacing: -7px;
     text-indent: -3px;
     margin: 40px 0 30px -6px;
@@ -15,15 +15,10 @@
     font-size: 100px;
     font-family: "Stolzl Bold";
     display: inline-block;
-    background-image: -webkit-linear-gradient(left, $pink-color, $orange-color);
-    background-image: -moz-linear-gradient(left, $pink-color, $orange-color);
-    background-image: -ms-linear-gradient(left, $pink-color, $orange-color);
-    background-image: -o-linear-gradient(left, $pink-color, $orange-color);
-    background-image: linear-gradient(to bottom, $pink-color, $orange-color);
     color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
     word-wrap: wrap;
+    @include clip-path;
+    @include main-gradient;
   }
   @media(max-width: 750px) {
     .container__header {
@@ -62,7 +57,7 @@
         transform: scale(0.85);
         overflow: visible;
       }
-      &:hover > .project__card > .project__card__preview > img {
+      &:hover > .project__card > .project__card__preview > a > img {
         transform: scale(1.25) translateX(50px);
         z-index: 999;
       }

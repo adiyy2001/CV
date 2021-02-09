@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
-@import "./shared/variables";
+@import "./shared/scss/variables";
+@import "./shared/scss/typography";
 
 *, *::after, *::after {
     margin: 0;
@@ -8,9 +9,6 @@
   }
 
 html, body { 
-  width: auto;
-  margin: 0px;
-  padding: 0px;
   overflow-x: hidden; 
  }
 
@@ -28,47 +26,6 @@ body {
     color: #092545;
     transition: background 0.5s ease; 
 }
-
-
-
-// typography
-@font-face {
-    font-family: 'Stolzl';
-    src: url('./shared/typography/Stolzl-Regular.eot'); /* IE9 Compat Modes */
-    src: url('./shared/typography/Stolzl-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('./shared/typography/Stolzl-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('./shared/typography/Stolzl-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-         url('./shared/typography/Stolzl-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
-
-
-  @font-face {
-    font-family: 'Stolzl book';
-    src: url('./shared/typography/Stolzl-book.eot'); /* IE9 Compat Modes */
-    src: url('./shared/typography/Stolzl-book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('./shared/typography/Stolzl-book.woff2') format('woff2'), /* Super Modern Browsers */
-         url('./shared/typography/Stolzl-book.woff') format('woff'), /* Pretty Modern Browsers */
-         url('./shared/typography/Stolzl-book.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
-
-  @font-face {
-    font-family: 'Stolzl light';
-    src: url('./shared/typography/Stolzl-light.eot'); /* IE9 Compat Modes */
-    src: url('./shared/typography/Stolzl-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('./shared/typography/Stolzl-light.woff2') format('woff2'), /* Super Modern Browsers */
-         url('./shared/typography/Stolzl-light.woff') format('woff'), /* Pretty Modern Browsers */
-         url('./shared/typography/Stolzl-light.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
-
-  @font-face {
-    font-family: 'Stolzl bold';
-    src: url('./shared/typography/Stolzl-bold.eot'); /* IE9 Compat Modes */
-    src: url('./shared/typography/Stolzl-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('./shared/typography/Stolzl-bold.woff2') format('woff2'), /* Super Modern Browsers */
-         url('./shared/typography/Stolzl-bold.woff') format('woff'), /* Pretty Modern Browsers */
-         url('./shared/typography/Stolzl-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
-
 
 .bodybg-color {
   background-color: $dark-blue-color !important;

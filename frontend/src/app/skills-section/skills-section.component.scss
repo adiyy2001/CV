@@ -1,4 +1,5 @@
-@import "../../shared/variables";
+@import "../../shared/scss/variables";
+@import "../../shared/scss/mixins";
 
 *, *::after, *::after {
   margin: 0;
@@ -50,7 +51,7 @@
   transition: .7s ease;
   &__pro {
     color: #231e39;
-    background-image: linear-gradient(to bottom, $pink-color, $orange-color);
+    @include main-gradient;
     border-radius: 3px;
     font-size: 14px;
     font-weight: bold;

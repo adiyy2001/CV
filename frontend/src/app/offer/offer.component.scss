@@ -1,4 +1,5 @@
-@import "../../shared/variables";
+@import "../../shared/scss/variables";
+@import "../../shared/scss/mixins";
 
 .container-fluid1 {
   max-width: 1200px;
@@ -18,15 +19,10 @@
     font-size: 100px;
     font-family: "Stolzl Bold";
     display: inline-block;
-    background-image: -webkit-linear-gradient(left, $pink-color, $orange-color);
-    background-image: -moz-linear-gradient(left, $pink-color, $orange-color);
-    background-image: -ms-linear-gradient(left, $pink-color, $orange-color);
-    background-image: -o-linear-gradient(left, $pink-color, $orange-color);
-    background-image: linear-gradient(to bottom, $pink-color, $orange-color);
     color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
     word-wrap: wrap;
+    @include main-gradient;
+    @include clip-path;
   }
 
   @media (max-width: 900px) {
@@ -91,31 +87,7 @@
               left: 0;
               width: 50%;
               height: 3px;
-              background-image: -webkit-linear-gradient(
-                left,
-                $pink-color,
-                $orange-color
-              );
-              background-image: -moz-linear-gradient(
-                left,
-                $pink-color,
-                $orange-color
-              );
-              background-image: -ms-linear-gradient(
-                left,
-                $pink-color,
-                $orange-color
-              );
-              background-image: -o-linear-gradient(
-                left,
-                $pink-color,
-                $orange-color
-              );
-              background-image: linear-gradient(
-                to bottom,
-                $pink-color,
-                $orange-color
-              );
+              @include main-gradient;
             }
           }
           &__description {
